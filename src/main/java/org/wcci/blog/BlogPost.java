@@ -12,17 +12,17 @@ public class BlogPost {
 	private LocalDateTime blogDateTime;
 	private BlogGenre blogGenre;
 	private String blogBody;
-	private List<BlogTag> blogTags;
+	private BlogTag blogTag;
 
 	
 	public BlogPost(String blogPostTitle, BlogAuthor blogAuthor, LocalDateTime blogDateTime,
-			BlogGenre blogGenre, String blogBody, BlogTag... blogTags) {
+			BlogGenre blogGenre, String blogBody, BlogTag blogTag) {
 		this.blogPostTitle = blogPostTitle;
 		this.blogAuthor = blogAuthor;
 		this.blogDateTime = blogDateTime;
 		this.blogGenre = blogGenre;
 		this.blogBody = blogBody;
-		this.blogTags = Arrays.asList(blogTags);
+		this.blogTag = blogTag;
 	}
 
 
@@ -50,9 +50,8 @@ public class BlogPost {
 		return blogBody;
 	}
 
-
-	public List<BlogTag> getBlogTags() {
-		return blogTags;
+	public BlogTag getBlogTag() {
+		return blogTag;
 	}
 	
 }
