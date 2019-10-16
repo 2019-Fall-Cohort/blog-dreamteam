@@ -3,7 +3,6 @@ package org.wcci.blog;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import org.assertj.core.util.Arrays;
 
 public class BlogPost {
 
