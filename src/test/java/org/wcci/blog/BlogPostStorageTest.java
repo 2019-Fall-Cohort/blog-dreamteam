@@ -15,11 +15,17 @@ public class BlogPostStorageTest {
 		BlogPostStorage underTestPostStorage = new BlogPostStorage();
 		BlogTagStorage underTestTagStorage = new BlogTagStorage();
 		
-		BlogPost underTestBlogPost = new BlogPost("Brian Smells", new BlogAuthor("Brian"), LocalDateTime.now(), new BlogGenre("Smells"), "Sexy Body", new BlogTag("Stinky"));
+		BlogPost underTestBlogPost = new BlogPost("Brian Smells", new BlogAuthor("Brian"), LocalDateTime.now(), new BlogGenre("Smells"), "Goober", new BlogTag("Stinky"));
 		underTestPostStorage.add(underTestBlogPost);
 		
 		BlogAuthor underTestBlogAuthor = new BlogAuthor("Brian");
 		underTestAuthorStorage.add(underTestBlogAuthor);
+		
+		BlogGenre underTestBlogGenre = new BlogGenre("Hilarious");
+		underTestGenreStorage.add(underTestBlogGenre);
+		
+		BlogTag underTestBlogTag = new BlogTag ("Woody");
+		underTestTagStorage.add(underTestBlogTag);
 		
 	}
 
