@@ -1,11 +1,16 @@
 package org.wcci.blog;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+@Entity
 public class BlogPost {
-
+	@Id
+	@GeneratedValue
+	private Long id;
 	private String blogPostTitle;
 	private BlogAuthor blogAuthor;
 	private LocalDateTime blogDateTime;

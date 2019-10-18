@@ -9,7 +9,7 @@ import org.junit.Test;
 public class BlogPostStorageTest {
 	
 	@Test
-	public void instantiatesStorage() {
+	public void shouldBeAbleToAddBlogPostToStorage() {
 		BlogAuthorStorage underTestAuthorStorage = new BlogAuthorStorage();
 		BlogGenreStorage underTestGenreStorage = new BlogGenreStorage();
 		BlogPostStorage underTestPostStorage = new BlogPostStorage();
@@ -26,6 +26,7 @@ public class BlogPostStorageTest {
 		
 		BlogTag underTestBlogTag = new BlogTag ("Woody");
 		underTestTagStorage.add(underTestBlogTag);
+		
 		
 	}
 
