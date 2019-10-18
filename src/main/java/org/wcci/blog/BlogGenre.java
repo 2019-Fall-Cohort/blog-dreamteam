@@ -17,4 +17,12 @@ public class BlogGenre {
 	public BlogGenre(String name) {
 		this.blogGenreName = name;
 	}
+
+	public String getBlogGenreName() {
+		return blogGenreName;
+	}
+
+	public List<BlogPost> getBlogPosts() {
+		return blogPosts;
+	}
 }

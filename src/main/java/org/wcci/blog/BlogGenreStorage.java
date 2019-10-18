@@ -12,5 +12,12 @@ public class BlogGenreStorage {
 		return blogGenreRepo.save(blogGenreToAdd);
 		
 	}
+	public BlogGenre findBlogGenre(Long id) {
+		return blogGenreRepo.findById(id).get();
+	}
+
+	public Iterable<BlogGenre> findAllTheGenres() {
+		return blogGenreRepo.findAll();
+	}
 
 }

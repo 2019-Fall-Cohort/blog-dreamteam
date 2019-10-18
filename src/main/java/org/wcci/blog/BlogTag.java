@@ -16,4 +16,12 @@ public class BlogTag {
 	public BlogTag(String name) {
 		this.blogTagName = name;
 	}
+
+	public String getBlogTagName() {
+		return blogTagName;
+	}
+
+	public List<BlogPost> getBlogPosts() {
+		return blogPosts;
+	}
 }
