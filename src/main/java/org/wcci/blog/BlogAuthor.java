@@ -17,4 +17,12 @@ public class BlogAuthor {
 	public BlogAuthor(String name) {
 		this.blogAuthorName = name;
 	}
+
+	public String getBlogAuthorName() {
+		return blogAuthorName;
+	}
+
+	public List<BlogPost> getBlogPosts() {
+		return blogPosts;
+	}
 }

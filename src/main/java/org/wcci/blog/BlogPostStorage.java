@@ -11,5 +11,13 @@ public class BlogPostStorage {
 	public BlogPost add(BlogPost blogPostToAdd) {
 		return blogPostRepo.save(blogPostToAdd);
 	}
+	
+	public BlogPost findBlogPost(Long id) {
+		return blogPostRepo.findById(id).get();
+	}
+
+	public Iterable<BlogPost> findAllTheCompanies() {
+		return blogPostRepo.findAll();
+	}
 
 }

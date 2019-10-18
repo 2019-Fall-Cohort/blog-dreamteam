@@ -9,8 +9,14 @@ public class BlogTagStorage {
 	BlogTagRepository blogTagRepo;
 	
 	public BlogTag add(BlogTag blogTagToAdd) {
-		return blogTagRepo.save(blogTagToAdd);
-		
+		return blogTagRepo.save(blogTagToAdd);	
+	}
+	public BlogTag findBrewingCompany(Long id) {
+		return blogTagRepo.findById(id).get();
+	}
+
+	public Iterable<BlogTag> findAllTheCompanies() {
+		return blogTagRepo.findAll();
 	}
 
 }
