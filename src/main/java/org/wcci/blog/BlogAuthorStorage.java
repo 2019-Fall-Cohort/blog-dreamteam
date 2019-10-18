@@ -10,16 +10,15 @@ public class BlogAuthorStorage {
 
 	public BlogAuthor add(BlogAuthor blogAuthorToAdd) {
 		return blogAuthorRepo.save(blogAuthorToAdd);
-		
-	}
-	
-		public BlogAuthor findBlogAuthor(Long id) {
-			return blogAuthorRepo.findById(id).get();
-		}
 
-		public Iterable<BlogAuthor> findAllTheBlogAuthors() {
-			return blogAuthorRepo.findAll();
-		}
-		
 	}
 
+	public BlogAuthor findBlogAuthor(Long id) {
+		return blogAuthorRepo.findById(id).get();
+	}
+
+	public Iterable<BlogAuthor> findAllTheBlogAuthors() {
+		return blogAuthorRepo.findAll();
+	}
+
+}

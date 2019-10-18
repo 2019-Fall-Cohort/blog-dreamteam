@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class BlogPost {
@@ -12,10 +14,13 @@ public class BlogPost {
 	@GeneratedValue
 	private Long id;
 	private String blogPostTitle;
+	@ManyToOne
 	private BlogAuthor blogAuthor;
 	private LocalDateTime blogDateTime;
+	@ManyToOne
 	private BlogGenre blogGenre;
 	private String blogBody;
+	@ManyToMany
 	private BlogTag blogTag;
 
 	
