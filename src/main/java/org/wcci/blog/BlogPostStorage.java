@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 public class BlogPostStorage {
 	@Autowired
 	BlogPostRepository blogPostRepo;
-	
 
 	public BlogPost add(BlogPost blogPostToAdd) {
 		return blogPostRepo.save(blogPostToAdd);
