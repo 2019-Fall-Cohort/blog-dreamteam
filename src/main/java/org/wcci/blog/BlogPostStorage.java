@@ -16,7 +16,7 @@ public class BlogPostStorage {
 		return blogPostRepo.findById(id).get();
 	}
 
-	public Iterable<BlogPost> findAllTheCompanies() {
+	public Iterable<BlogPost> findAllTheBlogPosts() {
 		return blogPostRepo.findAll();
 	}
 

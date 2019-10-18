@@ -16,7 +16,7 @@ public class BlogGenreStorage {
 		return blogGenreRepo.findById(id).get();
 	}
 
-	public Iterable<BlogGenre> findAllTheGenres() {
+	public Iterable<BlogGenre> findAllTheBlogGenres() {
 		return blogGenreRepo.findAll();
 	}
 
