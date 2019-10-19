@@ -8,7 +8,7 @@ public class BlogGenreStorage {
 	@Autowired
 	BlogGenreRepository blogGenreRepo;
 
-	public BlogGenre add(BlogGenre blogGenreToAdd) {
+	public BlogGenre addBlogGenre(BlogGenre blogGenreToAdd) {
 		return blogGenreRepo.save(blogGenreToAdd);
 		
 	}
@@ -17,7 +17,7 @@ public class BlogGenreStorage {
 	}
 
 	public Iterable<BlogGenre> findAllTheBlogGenres() {
-		return blogGenreRepo.findAll();
+		return blogGenreRepo.findAllByOrderByBlogGenreNameAsc();
 	}
 
 }

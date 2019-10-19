@@ -1,0 +1,20 @@
+@import url("main.css");
+
+.header{
+    display: flex;
+    justify-content: center;
+    grid-area: header;
+    background-color: var(--blue);
+}
+
+.nav {
+    grid-area: nav;
+    background-color: var(--green);
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    grid-area: footer;
+    background-color: var(--brown);
+}

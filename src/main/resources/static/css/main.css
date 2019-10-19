@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    --brown: #9A6B4C;
+    --blue: rgb(85, 186, 226);
+    --green: #59AA44;
+}
+
+.content-index{
+    background-image: url("../static/images/cartoontree.png");
+}
+.wrapper {
+    display: grid;
+    grid-template-areas: "header header" "nav content" "footer footer";
+    grid-template-columns: 15% 1fr;
+    grid-template-rows: 12% 1fr 8%;
+    height: 100vh;
+    width: 100vw;
+}

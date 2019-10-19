@@ -8,7 +8,7 @@ public class BlogAuthorStorage {
 	@Autowired
 	BlogAuthorRepository blogAuthorRepo;
 
-	public BlogAuthor add(BlogAuthor blogAuthorToAdd) {
+	public BlogAuthor addBlogAuthor(BlogAuthor blogAuthorToAdd) {
 		return blogAuthorRepo.save(blogAuthorToAdd);
 
 	}

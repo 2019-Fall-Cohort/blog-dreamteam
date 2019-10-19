@@ -1,27 +1,3 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    --brown: brown;
-    --blue: skyblue;
-    --green: rgb(152 251 152);
-}
-
-.footer {
-    display: flex;
-    justify-content: flex-end;
-    grid-area: footer;
-    background-color: var(--brown);
-}
-.header{
-    display: flex;
-    justify-content: center;
-    grid-area: header;
-    background-color: var(--blue);
-}
 .masonryblocks{
     background-color: black;   
     border-radius: 4%;
@@ -79,17 +55,3 @@ html {
     column-count: 4;
     }
 } 
-
-.nav {
-    grid-area: nav;
-    background-color: var(--green);
-}
-
-.wrapper {
-    display: grid;
-    grid-template-areas: "header header" "nav content" "footer footer";
-    grid-template-columns: 15% 1fr;
-    grid-template-rows: 12% 1fr 8%;
-    height: 100vh;
-    width: 100vw;
-}
