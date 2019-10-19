@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tree Blog Single Post</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/header-nav-footer.css">
+    <link rel="stylesheet" href="/css/masonry-stylesheet.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="header" th:insert="/sections/header :: header"></section>
+        <section class="nav" th:insert="/sections/nav :: nav"></section>
+
+        <section class="content">
+            <div class="add-post-header">
+                <h1 class="add-post-header__text">Add a new Post!</h1>
+            </div>
+
+            <form class="add-post-form" action="/add" method="POST">
+                <fieldset>
+                    <div class="add-post-form__field">
+                        <label for="blogPostTitle" class="add-post-form__field-label">Post Title:</label>
+                        <input class="add-post-form__field-input" type="text" id="blogPostTitle" name="blogPostTitle"></input>
+                    </div>
+
+                    <div class="add-post-form__field">
+                        <label for="blogAuthorId" class="add-post-form__field-label">Post Author:</label>
+                        <select class="add-post-form__field-dropdown" name="blogAuthorId" id="blogAuthorId">
+                            <option value="SELECT AN AUTHOR"></option>
+                            <option th:each="blogAuthor : ${blogAuthors}" th:value="${blogAuthor.id}" th:text="${blogAuthor.blogAuthorName}"></option>
+                        </select>
+                    </div>
+
+                    <div class="add-post-form__field">
+                        <label for="blogGenreId" class="add-post-form__field-label">Post Genre:</label>
+                        <select class="add-post-form__field-dropdown" name="blogGenreId" id="blogGenreId">
+                            <option value="SELECT A GENRE"></option>
+                            <option th:each="blogGenre : ${blogGenres}" th:value="${blogGenre.id}" th:text="${blogGenre.blogGenreName}"></option>
+                        </select>
+                    </div>
+
+                    <div class="add-post-form__field">
+                        <label for="blogBody" class="add-post-form__field-label">Post Body:</label>
+                        <textarea class="add-post-form__field-textarea" id="blogBody" name="blogBody"></textarea>
+                    </div>
+            
+                    <div class="add-post-form__field">
+                        <label class="add-post-form__field-label">(Ctrl + Left Click to add multiple tags)</label>
+                        <select multiple size class="add-post-form__field-selectbox" name="blogTagList" id="blogTagList">
+                            <option th:each="blogTag : ${blogTags}" th:value="${blogTag.id}" th:text="${blogTag.blogTagName}"></option>
+                        </select>
+                    </div>
+            
+                </fieldset>
+            </form>
+        </section>
+        <section class="footer" th:insert="/sections/footer :: footer"></section>
+    </div>
+</body>
+
+</html>
