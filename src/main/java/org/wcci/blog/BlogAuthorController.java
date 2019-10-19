@@ -34,7 +34,7 @@ public class BlogAuthorController {
 	@PostMapping("/add")
 	public String addAuthor(BlogAuthor authorName, Long authorId) {
 		BlogAuthor author = authors.findBlogAuthor(authorId);
-		authors.add(authorName);
+		authors.addBlogAuthor(authorName);
 		
 		return "redirect:/author/" + authorId;
 	}

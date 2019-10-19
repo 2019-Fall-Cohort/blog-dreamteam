@@ -34,7 +34,7 @@ public class BlogGenreController {
 	@PostMapping("/add")
 	public String addGenre(BlogGenre genreName, Long genreId) {
 		BlogGenre genre = genres.findBlogGenre(genreId);
-		genres.add(genreName);
+		genres.addBlogGenre(genreName);
 		
 		return "redirect:/genre/" + genreId;
 	}
