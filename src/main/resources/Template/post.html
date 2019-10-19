@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tree Blog</title>
+    <link rel="stylesheet" href="Static\css\landing.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="header" th:insert="/Sections/header :: header"></section>
+        <section class="nav" th:insert="/Sections/nav :: nav"></section>
+
+        <section class="single-blog-post__container">
+            <div class="masonryholder">
+                <section class="masonryblocks">
+                    <article class="masonryblocks__blog-item">
+                        <section class="masonryblocks__blog-item__card">
+                            <h2 class="masonryblocks__blog-item__blogPostTitle" th:text="${blogPost.blogPostTitle}">Default Blog Title</a></h2>
+                            <h3 class="masonryblocks__blog-item__blogAuthor" th:text="${blogPost.blogAuthor.blogAuthorName}">Default Blog Author</h3>
+                            <h4 class="masonryblocks__blog-item__blogBody" th:text="${blogPost.blogBody}">Default Blog Body</h4>
+                            <h5 class="masonryblocks__blog-item__blogGenre" th:text="${blogPost.blogGenre.blogGenreName}">Default Blog Genre</h5>
+                            <h5 class="masonryblocks__blog-item__blogTag" th:text="${blogPost.blogTab}">Default Blog Tag</h5>
+                            <h6 class="masonryblocks__blog-item__blogDateTime" th:text="${blogPost.blogDateTime}">4/14/14 14:44</h6>
+                        </section>
+                    </article>
+                </section>
+            </div>
+        </section>
+
+        <section class="footer" th:insert="/Sections/footer :: footer"></section>
+    </div>
+</body>
+
+</html>
