@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tree Blog</title>
+    <title>Tree Blog Single Post</title>
     <link rel="stylesheet" href="Static\css\landing.css">
 </head>
 
@@ -23,7 +23,9 @@
                             <h3 class="masonryblocks__blog-item__blogAuthor" th:text="${blogPost.blogAuthor.blogAuthorName}">Default Blog Author</h3>
                             <h4 class="masonryblocks__blog-item__blogBody" th:text="${blogPost.blogBody}">Default Blog Body</h4>
                             <h5 class="masonryblocks__blog-item__blogGenre" th:text="${blogPost.blogGenre.blogGenreName}">Default Blog Genre</h5>
-                            <h5 class="masonryblocks__blog-item__blogTag" th:text="${blogPost.blogTab}">Default Blog Tag</h5>
+                            <div class="masonryblocks__blog-item__blogTag" th:each="blogTag: ${blogPost.blogTags}">
+                                <h5 class="masonryblocks__blog-item__blogTag-each" th:text="${blogTag.blogTagName}">Default Blog Tags</h5>
+                            </div>
                             <h6 class="masonryblocks__blog-item__blogDateTime" th:text="${blogPost.blogDateTime}">4/14/14 14:44</h6>
                         </section>
                     </article>
