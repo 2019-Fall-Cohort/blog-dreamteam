@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    --brown: brown;
+    --blue: skyblue;
+    --green: rgb(152 251 152);
+}
+
+.wrapper {
+    display: grid;
+    grid-template-areas: "header header" "nav content" "footer footer";
+    grid-template-columns: 15% 1fr;
+    grid-template-rows: 12% 1fr 8%;
+    height: 100vh;
+    width: 100vw;
+}
