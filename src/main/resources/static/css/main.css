@@ -10,6 +10,9 @@ html {
     --green: #59AA44;
 }
 
+.content-index{
+    background-image: url("../static/images/cartoontree.png");
+}
 .wrapper {
     display: grid;
     grid-template-areas: "header header" "nav content" "footer footer";

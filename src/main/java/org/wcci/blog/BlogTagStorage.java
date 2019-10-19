@@ -8,7 +8,7 @@ public class BlogTagStorage {
 	@Autowired
 	BlogTagRepository blogTagRepo;
 	
-	public BlogTag add(BlogTag blogTagToAdd) {
+	public BlogTag addBlogTag(BlogTag blogTagToAdd) {
 		return blogTagRepo.save(blogTagToAdd);	
 	}
 	public BlogTag findBlogTag(Long id) {

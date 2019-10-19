@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface BlogTagRepository extends CrudRepository<BlogTag, Long> {
-	public Iterable<BlogTag> findAllByOrderByTagNameAsc();
+	public Iterable<BlogTag> findAllByOrderByBlogTagNameAsc();
 }
