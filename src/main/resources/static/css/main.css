@@ -5,9 +5,9 @@
 }
 
 html {
-    --brown: brown;
-    --blue: skyblue;
-    --green: rgb(152 251 152);
+    --brown: #9A6B4C;
+    --blue: rgb(85, 186, 226);
+    --green: #59AA44;
 }
 
 .wrapper {
