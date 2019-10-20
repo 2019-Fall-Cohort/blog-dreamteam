@@ -16,6 +16,9 @@ public class BlogAuthor {
 	@OneToMany (mappedBy = "blogAuthor")
 	private List<BlogPost> blogPosts;
 	
+	public BlogAuthor () {
+	}
+
 	public BlogAuthor(String name) {
 		this.blogAuthorName = name;
 	}
