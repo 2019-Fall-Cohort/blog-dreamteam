@@ -15,6 +15,9 @@ public class BlogTag {
 	@ManyToMany(mappedBy = "blogTags")
 	private List<BlogPost> blogPosts;
 	
+	public BlogTag () {
+	}
+
 	public BlogTag(String name) {
 		this.blogTagName = name;
 	}
