@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tree Blog</title>
-    <link rel="stylesheet" href="../static/css/main.css">
-    <link rel="stylesheet" href="../static/css/header-nav-footer.css">
-    <link rel="stylesheet" href="../static/css/masonry-stylesheet.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header-nav-footer.css">
+    <link rel="stylesheet" href="css/masonry-stylesheet.css">
 </head>
 
 <body>
     <div class="wrapper">
-        <section class="header" th:insert="./sections/header :: header"></section>
-        <section class="nav" th:insert="./sections/nav :: nav"></section>
+        <section class="header" th:insert="/sections/header :: header"></section>
+        <section class="nav" th:insert="/sections/nav :: nav"></section>
 
         <section class="content">
             <div class="masonryholder">
@@ -35,7 +35,7 @@
             </div>
         </section>
 
-        <section class="footer" th:insert="./sections/footer :: footer"></section>
+        <section class="footer" th:insert="/sections/footer :: footer"></section>
     </div>
 </body>
 
