@@ -2,6 +2,7 @@ package org.wcci.blog;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -31,6 +32,12 @@ public class BlogControllerTest {
 	public void displayAllReviews() throws Exception {
 		String viewName = underTest.getPosts(model);
 		assertThat(viewName, is("posts"));
+	}
+	
+	@Test
+	public void displayIndex() throws Exception {
+		String viewName = underTest.welcomePage(model);
+		assertThat(viewName, is("index"));
 	}
 	
 	@Test
