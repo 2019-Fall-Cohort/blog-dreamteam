@@ -13,8 +13,8 @@
 
 <body>
     <div class="wrapper">
-        <section class="header" th:insert="/sections/header :: header"></section>
-        <section class="nav" th:insert="/sections/nav :: nav"></section>
+        <section class="header" th:insert="./sections/header :: header"></section>
+        <section class="nav" th:insert="./sections/nav :: nav"></section>
 
         <section class="content">
             <div class="masonryholder">
@@ -35,7 +35,7 @@
             </div>
         </section>
 
-        <section class="footer" th:insert="/sections/footer :: footer"></section>
+        <section class="footer" th:insert="./sections/footer :: footer"></section>
     </div>
 </body>
 
