@@ -21,7 +21,7 @@ public class BlogTagController {
 	public String getTags(Model model) {
 		model.addAttribute("tags", tags.findAllTheBlogTags());
 
-		return "tags";
+		return "posts";
 
 	}
 
@@ -29,7 +29,7 @@ public class BlogTagController {
 	public String getTag(@PathVariable("id") long id, Model model) {
 		model.addAttribute("tag", tags.findBlogTag(id));
 
-		return "tag";
+		return "post";
 
 	}
 
@@ -38,7 +38,7 @@ public class BlogTagController {
 		BlogTag tag = tags.findBlogTag(tagId);
 		tags.addBlogTag(blogTagName);
 
-		return "redirect:/tag/" + tagId;
+		return "redirect:/add_post/";
 	}
 
 }

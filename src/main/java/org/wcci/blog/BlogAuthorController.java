@@ -19,7 +19,7 @@ public class BlogAuthorController {
 	public String getAuhtors(Model model) {
 		model.addAttribute("authors", authors.findAllTheBlogAuthors());
 		
-		return "authors";
+		return "posts";
 		
 	}
 	
@@ -27,7 +27,7 @@ public class BlogAuthorController {
 	public String getAuthor(@PathVariable ("id") long id, Model model) {
 		model.addAttribute("author", authors.findBlogAuthor(id));
 		
-		return "author";
+		return "add_post";
 		
 	}
 	
@@ -36,7 +36,7 @@ public class BlogAuthorController {
 		BlogAuthor author = authors.findBlogAuthor(authorId);
 		authors.addBlogAuthor(authorName);
 		
-		return "redirect:/author/" + authorId;
+		return "redirect:add_post";
 	}
 	
 	

@@ -19,7 +19,7 @@ public class BlogGenreController {
 	public String getGenres(Model model) {
 		model.addAttribute("genres", genres.findAllTheBlogGenres());
 		
-		return "genres";
+		return "posts";
 		
 	}
 	
@@ -27,7 +27,7 @@ public class BlogGenreController {
 	public String getGenre(@PathVariable ("id") long id, Model model) {
 		model.addAttribute("genre", genres.findBlogGenre(id));
 		
-		return "genre";
+		return "posts";
 		
 	}
 	
@@ -36,7 +36,7 @@ public class BlogGenreController {
 		BlogGenre genre = genres.findBlogGenre(genreId);
 		genres.addBlogGenre(genreName);
 		
-		return "redirect:/genre/" + genreId;
+		return "redirect:/add_post/";
 	}
 }
 	
