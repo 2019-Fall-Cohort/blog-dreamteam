@@ -62,64 +62,9 @@ public class HomeController {
 			postStorage.add(postToAdd);
 			blogPostId = postToAdd.getId();
 		}
-		return "redirect:/posts/" + blogPostId;
+		return "redirect: all_posts" + blogPostId;
 	}
 	
-	@GetMapping("/author")
-	public String getAuhtors(Model model) {
-		model.addAttribute("authors", authorStorage.findAllTheBlogAuthors());
-		
-		return "";
-		
-	}
-	
-	@GetMapping("/author/{id}")
-	public String getAuthor(@PathVariable ("id") long id, Model model) {
-		model.addAttribute("author", authorStorage.findBlogAuthor(id));
-		
-		return "";
-		
-	}
-	
-	@PostMapping("/author/add")
-	public String addAuthor(BlogAuthor authorName, Long authorId) {
-		//BlogAuthor author = authors.findBlogAuthor(authorId);
-		authorStorage.addBlogAuthor(authorName);
-		
-		return "redirect:add_post";
-	}
-	
-	@GetMapping("/genre")
-	public String getGenres(Model model) {
-		model.addAttribute("genres", genreStorage.findAllTheBlogGenres());
-		
-		return "posts";
-		
-	}
-	
-	@GetMapping("/genre/{id}")
-	public String getGenre(@PathVariable ("id") long id, Model model) {
-		model.addAttribute("genre", genreStorage.findBlogGenre(id));
-		
-		return "posts";
-		
-	}
-	
-	@PostMapping("/genre/add")
-	public String addGenre(BlogGenre genreName, Long genreId) {
-		//BlogGenre genre = genres.findBlogGenre(genreId);
-		genreStorage.addBlogGenre(genreName);
-		
-		return "redirect:/add_post/";
-	}
-	
-	@GetMapping("/posts")
-	public String getPosts(Model model) {
-		model.addAttribute("posts", postStorage.findAllTheBlogPosts());
-
-		return "posts";
-
-	}
 
 	@GetMapping("/posts/{id}")
 	public String getPost(@PathVariable Long id, Model model) {
@@ -129,38 +74,4 @@ public class HomeController {
 
 	}
 
-	@PostMapping("/post/add")
-	public String addPost(String blogPostTitle, BlogAuthor blogAuthor, LocalDateTime blogDateTime, BlogGenre blogGenre,
-		   String blogBody, Long postId, BlogTag... blogTags) {
-		//BlogPost post = posts.findBlogPost(postId);
-		postStorage.add(new BlogPost (blogPostTitle, blogAuthor, blogDateTime, blogGenre, blogBody, blogTags));
-
-		return "redirect:/post/" + postId;
-	}
-	
-	@GetMapping("/tag")
-	public String getTags(Model model) {
-		model.addAttribute("tags", tagStorage.findAllTheBlogTags());
-
-		return "posts";
-
-	}
-
-	@GetMapping("/tag/{id}")
-	public String getTag(@PathVariable("id") long id, Model model) {
-		model.addAttribute("tag", tagStorage.findBlogTag(id));
-
-		return "post";
-
-	}
-
-	@PostMapping("/tag/add")
-	public String addTag(BlogTag blogTagName, Long tagId) {
-	//	BlogTag tag = tags.findBlogTag(tagId);
-		tagStorage.addBlogTag(blogTagName);
-
-		return "redirect:/add_post/";
-	}
-	
-	
 }
