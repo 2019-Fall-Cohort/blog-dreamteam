@@ -18,20 +18,18 @@
 
         <section class="content">
             <div class="masonryholder">
-                <section class="masonryblocks">
-                    <article class="masonryblocks__blog-item" th:each="blogPost : ${blogPosts}">
-                        <section class="masonryblocks__blog-item__card">
-                            <h2 class="masonryblocks__blog-item__blogPostTitle"><a th:text="${blogPost.blogPostTitle}" th:href="|../blogPosts/${blogPost.id}|">Default Blog Title</a></h2>
-                            <h3 class="masonryblocks__blog-item__blogAuthor" th:text="${blogPost.blogAuthor.blogAuthorName}">Default Blog Author</h3>
-                            <h4 class="masonryblocks__blog-item__blogBody" th:text="${blogPost.blogBody}">Default Blog Body</h4>
-                            <h5 class="masonryblocks__blog-item__blogGenre" th:text="${blogPost.blogGenre.blogGenreName}">Default Blog Genre</h5>
-                            <div class="masonryblocks__blog-item__blogTag" th:each="blogTag: ${blogPost.blogTags}">
-                                <h5 class="masonryblocks__blog-item__blogTag-each" th:text="${blogTag.blogTagName}">Default Blog Tags</h5>
+                    <article class="masonryblocks__blog-item" th:each="post : ${posts}">
+                        <section class="masonryblocks">
+                            <h2 class="masonryblocks__blog-item__blogPostTitle"><a th:text="${post.blogPostTitle}" th:href="|/posts/${post.id}|">Default Blog Title</a></h2>
+                            <h3 class="masonryblocks__blog-item__blogAuthor" th:text="${post.blogAuthor.blogAuthorName}">Default Blog Author</h3>
+                            <h4 class="masonryblocks__blog-item__blogBody" th:text="${post.blogBody}">Default Blog Body</h4>
+                            <!-- <h5 class="masonryblocks__blog-item__blogGenre" th:text="${post.blogGenre.blogGenreName}">Default Blog Genre</h5>
+                            <div class="masonryblocks__blog-item__blogTag" th:each="tag: ${post.blogTags}">
+                                <h5 class="masonryblocks__blog-item__blogTag-each" th:text="${tag.blogTagName}">Default Blog Tags</h5>
                             </div>
-                            <h6 class="masonryblocks__blog-item__blogDateTime" th:text="${blogPost.blogDateTime}">4/14/14 14:44</h6>
+                            <h6 class="masonryblocks__blog-item__blogDateTime" th:text="${post.blogDateTime}">4/14/14 14:44</h6> -->
                         </section>
                     </article>
-                </section>
             </div>
         </section>
 

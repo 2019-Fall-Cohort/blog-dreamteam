@@ -27,6 +27,19 @@ public class HomeController {
 		return "index";
 	}
 	
+	@GetMapping("all_posts")
+	public String getAllBlogPosts(Model model) {
+		model.addAttribute("posts", postStorage.findAllTheBlogPosts());
+		return "posts";
+	}
+	
+	@GetMapping("/add_post")
+	public String getAddReview(Model model) {
+		model.addAttribute("genres", genreStorage.findAllTheBlogGenres());
+		model.addAttribute("tags", tagStorage.findAllTheBlogTags());
+		return "add_post";
+	}
+	
 	@GetMapping("/author")
 	public String getAuhtors(Model model) {
 		model.addAttribute("authors", authorStorage.findAllTheBlogAuthors());
