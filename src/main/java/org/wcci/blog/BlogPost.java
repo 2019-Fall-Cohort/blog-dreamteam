@@ -36,6 +36,16 @@ public class BlogPost {
 		this.blogBody = blogBody;
 		this.blogTags = Arrays.asList(blogTags);
 	}
+	
+	public BlogPost(String blogPostTitle, BlogAuthor blogAuthor, LocalDateTime blogDateTime,
+			BlogGenre blogGenre, String blogBody, List<BlogTag> blogTags) {
+		this.blogPostTitle = blogPostTitle;
+		this.blogAuthor = blogAuthor;
+		this.blogDateTime = blogDateTime;
+		this.blogGenre = blogGenre;
+		this.blogBody = blogBody;
+		this.blogTags = blogTags;
+	}
 
 	public BlogPost() {
 	}
