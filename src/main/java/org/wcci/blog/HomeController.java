@@ -121,10 +121,10 @@ public class HomeController {
 
 	}
 
-	@GetMapping("/post/{id}")
-	public String getPost(@PathVariable("id") long id, Model model) {
-		model.addAttribute("post", postStorage.findBlogPost(id));
-
+	@GetMapping("/posts/{id}")
+	public String getPost(@PathVariable Long id, Model model) {
+		BlogPost post = postStorage.findBlogPost(id);
+		model.addAttribute("post", post);
 		return "post";
 
 	}

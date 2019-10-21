@@ -28,13 +28,13 @@
                         <input class="add-post-form__field-input" type="text" id="blogPostTitle" name="blogPostTitle"></input>
                     </div>
 
-                    <!-- <div class="add-post-form__field">
+                    <div class="add-post-form__field">
                         <label for="blogAuthorId" class="add-post-form__field-label">Post Author:</label>
                         <select class="add-post-form__field-dropdown" name="blogAuthorId" id="blogAuthorId">
                             <option value="SELECT AN AUTHOR"></option>
                             <option th:each="author : ${authors}" th:value="${author.id}" th:text="${author.blogAuthorName}"></option>
                         </select>
-                    </div> -->
+                    </div>
 
                     <div class="add-post-form__field">
                         <label for="blogGenreId" class="add-post-form__field-label">Post Genre:</label>
