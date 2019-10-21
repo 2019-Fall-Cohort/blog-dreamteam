@@ -1,26 +1,13 @@
 # Blog Site
 
-## Module 3 Mastery Project
+## Team Members
+-Jake Savage
+-Brian Bross
+-Robby Remmenga
 
-### Goals
-Build a dynamic web application with a MVC architecture. 
-- Use TDD to create a suite of unit tests and integration tests.
-- Keep your code clean.
-  - Follow We Can Code IT's Java Style guide when writing your code.
-  - Use proper naming conventions.
-  - Make clear and concise names for methods and variables.
-- Use Agile workflows and tools.
-    - Use GitHub projects to create a kanban board for your project.
-    - Utilize sprint planning sessions to plan sprints.
-    - Sprint Retrospectives to reflect on your workflow and team dynamic.
-    - Pair Program at all times!
-- Make effective use of git and GitHub.
-  - Make frequent commits.
-  - Utilize feature branching.
-- Working Software based on the Module 3 Mastery guideline at [Module 3 Mastery](https://wecancodeit-materials.netlify.com/exercises/mastery/blog-ssr/) 
-  - We are looking for an web application that utilizes a MVC architecture using spring boot.  
-  - We need to see dynamic content being rendered and the ability to add content to the application through an HTML form.
-  - Upon submission we should have an application that starts and passes all tests in the test folder.
-  - Prepare a custom README.md file.  Smart Columbus Open Data Enthusiasts provide a good resource for what an README.md could look like [here.](https://github.com/SCODEMeetup/scode-repo-template/blob/master/README.md)
- ### Resources
- In addition to [We Can Code IT materials](https://wecancodeit-materials.netlify.com/cohorts/java/module-three-take-2/), we've included a [HELP.md](./HELP.md) file that is provided by Spring Initializr to help with Spring documentation.
+## Task
+We were tasked to create a dynamic webpage that allows the user to explore a blog page and add aditional blogs to a page.  We made a parady of blog sites using a tree blog website where the user can experience what a day in the life of a tree looks like.  
+
+### Description
+The user opens the website into a home page that welcomes the user to our site.  They can then explore our website through our links on the navigation bar.  They are then able to choose between making a blog or seeing all blogs.  When on the all blogs page they are able to see all blogs but also able to click on a blog to be able to pull up one singular blog.  If they go to an add blog page they can submit their own blog, choosing between a list of pregenerated tags and genres.  The author will be picked for them but they can still choose a title.  That then kicks the user back to the all blogs page where they can see their post. 
+
