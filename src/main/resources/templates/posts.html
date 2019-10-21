@@ -21,7 +21,7 @@
                     <article class="masonryblocks__blog-item" th:each="post : ${posts}">
                         <section class="masonryblocks">
                             <h2 class="masonryblocks__blog-item__blogPostTitle"><a th:text="${post.blogPostTitle}" th:href="|/posts/${post.id}|">Default Blog Title</a></h2>
-                            <h3 class="masonryblocks__blog-item__blogAuthor" th:text="${post.blogAuthor.blogAuthorName}">Default Blog Author</h3>
+                            by: <h3 class="masonryblocks__blog-item__blogAuthor" th:text="${post.blogAuthor.blogAuthorName}">Default Blog Author</h3>
                             <h4 class="masonryblocks__blog-item__blogBody" th:text="${post.blogBody}">Default Blog Body</h4>
                             <!-- <h5 class="masonryblocks__blog-item__blogGenre" th:text="${post.blogGenre.blogGenreName}">Default Blog Genre</h5>
                             <div class="masonryblocks__blog-item__blogTag" th:each="tag: ${post.blogTags}">
