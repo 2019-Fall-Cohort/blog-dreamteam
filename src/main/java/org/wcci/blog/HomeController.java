@@ -1,6 +1,8 @@
 package org.wcci.blog;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -35,9 +37,32 @@ public class HomeController {
 	
 	@GetMapping("/add_post")
 	public String getAddReview(Model model) {
+		model.addAttribute("authors", authorStorage.findAllTheBlogAuthors());
 		model.addAttribute("genres", genreStorage.findAllTheBlogGenres());
 		model.addAttribute("tags", tagStorage.findAllTheBlogTags());
 		return "add_post";
+	}
+	
+	@PostMapping("/add")
+	public String addPost(String blogPostTitle, Long blogAuthorId, Long blogGenreId, String blogBody, Long... blogTagList) {
+		BlogAuthor author = authorStorage.findBlogAuthor(blogAuthorId);
+		LocalDateTime dateTime = LocalDateTime.now();
+		BlogGenre genre = genreStorage.findBlogGenre(blogGenreId);
+		List<BlogTag> tags = new ArrayList<BlogTag>();
+		Long blogPostId;
+		if (blogTagList != null ) {
+			for (Long id : blogTagList) {
+				tags.add(tagStorage.findBlogTag(id));
+			}
+			BlogPost postToAdd = new BlogPost(blogPostTitle, author, dateTime, genre, blogBody, tags);
+			postStorage.add(postToAdd);
+			blogPostId = postToAdd.getId();
+		} else {
+			BlogPost postToAdd = new BlogPost(blogPostTitle, author, dateTime, genre, blogBody);
+			postStorage.add(postToAdd);
+			blogPostId = postToAdd.getId();
+		}
+		return "redirect:/posts/" + blogPostId;
 	}
 	
 	@GetMapping("/author")
@@ -96,10 +121,10 @@ public class HomeController {
 
 	}
 
-	@GetMapping("/post/{id}")
-	public String getPost(@PathVariable("id") long id, Model model) {
-		model.addAttribute("post", postStorage.findBlogPost(id));
-
+	@GetMapping("/posts/{id}")
+	public String getPost(@PathVariable Long id, Model model) {
+		BlogPost post = postStorage.findBlogPost(id);
+		model.addAttribute("post", post);
 		return "post";
 
 	}
