@@ -5,9 +5,9 @@
 # Blog Site
 
 ## Team Members
--Jake Savage
--Brian Bross
--Robby Remmenga
+Jake Savage,
+Brian Bross, and
+Robby Remmenga
 
 ## Task
 We were tasked to create a dynamic webpage that allows the user to explore a blog page and add aditional blogs to a page.  We made a parady of blog sites using a tree blog website where the user can experience what a day in the life of a tree looks like.  
