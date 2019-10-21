@@ -6,7 +6,7 @@
     display: inline-block;
     color: white;
     margin: 0 0 15px;
-    opacity: 0.7;
+    opacity: 0.5;
     padding: 20px;
     width: 100%;
 }
@@ -19,7 +19,7 @@
     display: inline-block;
     color: orange;
     margin: 0 0 15px;
-    opacity: 0.9;
+    opacity: 0.95;
     padding: 20px;
     width: 100%;
     transition: 2s;

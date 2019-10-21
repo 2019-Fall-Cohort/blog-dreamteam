@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 html {
     --brown: #9A6B4C;
     --blue: rgb(85, 186, 226);
@@ -16,6 +21,14 @@ html {
     align-content: flex-start;
     justify-content: flex-start;
     background-image: url("/images/cartoontree.png");
+}
+
+.masonryblocks__blog-item__blogAuthor{
+    text-decoration-line: underline;
+}
+
+.masonryblocks__blog-item__blogBody{
+    font-style: oblique;
 }
 .wrapper {
     display: grid;
