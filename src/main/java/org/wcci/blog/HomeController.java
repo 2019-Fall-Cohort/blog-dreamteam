@@ -62,7 +62,7 @@ public class HomeController {
 			postStorage.add(postToAdd);
 			blogPostId = postToAdd.getId();
 		}
-		return "redirect: all_posts" + blogPostId;
+		return "redirect:all_posts";
 	}
 	
 
